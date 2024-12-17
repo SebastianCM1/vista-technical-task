@@ -1,0 +1,65 @@
+.inactive {
+  opacity: 80%;
+}
+
+/* styles.css */
+
+.timer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.timing {
+  display: flex;
+  gap: 0.2rem;
+  white-space: nowrap;
+  width: 100px; /* Target width when visible */
+  opacity: 1;
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth animation */
+}
+
+.hidden {
+  width: 0; /* Collapsed state */
+  opacity: 0; /* Invisible state */
+  display: flex;
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth animation */
+}
+
+.recording .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  animation: pulse 1.5s infinite;
+}
+
+.playing .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+@keyframes width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

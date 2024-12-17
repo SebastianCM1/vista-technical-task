@@ -1,0 +1,75 @@
+.recordingContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+.buttonContainer{
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.radioGroup{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.radioButton{
+  margin-right: 0.5rem;
+}
+
+.button{
+  width: fit-content;
+  padding: 0.8rem 1.2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+
+}
+
+.button:not(.disabled):hover{
+  background-color: var(--primary-color-dark);
+}
+
+
+
+
+
+.stopButton{
+  background-color: black;  
+}
+
+.recordButton{
+  background-color: var(--primary-color);
+}
+
+
+.playButton{
+  background-color: var(--secondary-color);
+}
+
+.disabled{
+  background-color: grey;
+  cursor: not-allowed;
+  opacity: 60%;
+}
+
+
+@media (max-width: 350px){
+  .buttonContainer{
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+
+}
