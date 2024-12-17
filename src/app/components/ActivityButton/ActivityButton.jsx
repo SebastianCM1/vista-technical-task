@@ -5,25 +5,26 @@ function ActivityButton({
   onClick,
   disabled = false,
   isActive = false,
-  name='',
+  name = "",
   className = "",
   label = "",
 }) {
   return (
     <div className={styles.buttonContainer}>
-      <label className={styles.label}>{label}</label>
-      <div className={`${styles.ring} ${isActive && styles.ringActive}`}>
-        <button
-          className={`${styles.button} ${className} ${
-            isActive && styles.buttonActive
-          }`}
-          onClick={onClick}
-          disabled={disabled}
-          aria-label={`${name}-button`}
-        >
-          {icon}
-        </button>
-      </div>
+      <button
+        className={`${styles.button} ${className} ${
+          isActive && styles.buttonActive
+        }`}
+        onClick={onClick}
+        disabled={disabled}
+        aria-labelledby={`${name}-button`}
+      >
+        {icon}
+      </button>
+
+      <label id={`${name}-button`} className={styles.label}>
+        {label}
+      </label>
     </div>
   );
 }

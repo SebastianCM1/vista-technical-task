@@ -12,7 +12,7 @@ export default function Timer({
 
   useEffect(() => {
     let interval;
-
+    if (lastAction === "recording") setLimit(time);
     if (isRecording) {
       resetTimer();
       startInterval(() => setTime((prev) => prev + 1));
@@ -27,9 +27,7 @@ export default function Timer({
         });
       });
       updateLastAction("playing");
-    } else if (time > 0 && lastAction === "recording") {
-      setLimit(time);
-    }
+    } 
 
     function resetTimer() {
       setTime(0);

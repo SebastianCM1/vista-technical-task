@@ -34,13 +34,19 @@
   cursor: pointer;
   transition: 0.3s;
   font-weight: 600;
-
 }
 
-.button:not(.disabled):hover{
+/* selector for button disabled html attribute */
+
+.button[disabled]{
+  background-color: grey;
+  cursor: not-allowed;
+  opacity: 60%;
+}
+
+.button:not([disabled]):hover{
   background-color: var(--primary-color-dark);
 }
-
 
 
 
@@ -56,12 +62,6 @@
 
 .playButton{
   background-color: var(--secondary-color);
-}
-
-.disabled{
-  background-color: grey;
-  cursor: not-allowed;
-  opacity: 60%;
 }
 
 

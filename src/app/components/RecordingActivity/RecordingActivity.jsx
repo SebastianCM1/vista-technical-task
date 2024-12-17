@@ -103,7 +103,7 @@ function Activity() {
           </div>
         </div>
         <button
-          className={`${styles.button} ${!isFinalAnswer && styles.disabled}`}
+          className={`${styles.button} `}
           type="submit"
           disabled={!isFinalAnswer}
         >

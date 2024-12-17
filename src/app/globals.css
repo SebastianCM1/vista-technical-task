@@ -27,8 +27,8 @@ body {
 
 main{
   margin: 2rem;
-  max-width: 43rem;
   width: 100%;
+  max-width: 43rem;
 }
 
 * {
