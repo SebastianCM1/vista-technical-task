@@ -122,7 +122,7 @@ Some additional features that could be implemented:
 
 ## Author
 **Sebastian Correa Morales**
-- [GitHub](https://github.com/correasebastian/vista-techincal-test.git)
+- [GitHub](https://github.com/correasebastian/)
 - [LinkedIn](https://www.linkedin.com/in/elkykelyn/)
 
 ---
